@@ -12,7 +12,7 @@ app.use("/api",router)
 app.listen(process.env.port,async(req,res)=>{
     try{
        await connection
-       console.log("server in connected to db");
+       console.log("server in connected to db.");
     }catch(er){
         console.log(er)
     }
