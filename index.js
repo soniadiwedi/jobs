@@ -1,9 +1,12 @@
 const express=require("express")
 const connection = require("./connection/db")
 const router = require("./routes/jobRoute")
-const app=express()
+const cors = require("cors")
 require("dotenv").config()
+const app=express()
 app.use(express.json())
+app.use(cors())
+
 app.get("/",(req,res)=>{
     res.send("Welcome to Dashboard")
 })
